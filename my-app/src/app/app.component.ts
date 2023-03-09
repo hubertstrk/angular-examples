@@ -13,4 +13,16 @@ export class AppComponent {
   onNotify(event: {selectedId: number, input: string}) {
     window.alert(`${JSON.stringify(event)}`);
   }
+
+  message: string = 'Hello World'
+
+  startTime = () => {
+    setTimeout(() => {
+      this.message = 'Hello Universe'
+    },2000)
+  }
+
+  ngOnInit() {
+    this.startTime()
+  }
 }
