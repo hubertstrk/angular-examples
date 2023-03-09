@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'my-app'
   foo = 'bar'
 
-  onNotify(event: string) {
-    window.alert(`${event}`);
+  onNotify(event: {selectedId: number, input: string}) {
+    window.alert(`${JSON.stringify(event)}`);
   }
 }
