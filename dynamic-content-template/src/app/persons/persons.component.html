@@ -1,0 +1,16 @@
+<h1>Persons</h1>
+
+<app-details [person]="persons[0]" [templates]="[statusTemplate, languageTemplate]"></app-details>
+
+<button (click)="setStatus(); setLanguage();">></button>
+
+<ng-template #statusTemplate>
+    <div>{{selectedStatus.icon}}</div>
+    <div>{{selectedStatus.color}}</div>
+    <div>{{selectedStatus.active}}</div>
+    <div>{{selectedStatus.level}}</div>
+</ng-template>
+
+<ng-template #languageTemplate let-passed="passed" let-mark="mark">
+    <div>{{selectedLanguage.name}} | passed: {{passed}} ({{mark}})</div>
+</ng-template>

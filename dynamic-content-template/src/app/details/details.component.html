@@ -1,0 +1,8 @@
+<div *ngIf="person">
+  <div>{{person.name}}</div>
+  <div>{{person.age}}</div>
+</div>
+
+<div *ngFor="let template of templates">
+    <ng-container [ngTemplateOutlet]="template" [ngTemplateOutletContext]="context"></ng-container>
+</div>
