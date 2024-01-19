@@ -27,6 +27,8 @@ export class AppComponent implements OnInit {
     this.calendarOptions = {
       plugins: [dayGridPlugin, timeGridPlugin],
       initialView: 'dayGridMonth',
+      weekNumbers: true,
+      nowIndicator: true,
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
@@ -36,22 +38,27 @@ export class AppComponent implements OnInit {
         title: 'Düngen',
         start: new Date(2024, 0, 18, 8, 0, 0),
         end: new Date(2024, 0, 18, 18, 0, 0),
+        color: 'red'
       },{
         title: 'Aussaat',
         start: new Date(2024, 0, 18, 10, 0, 0),
         end: new Date(2024, 0, 18, 12, 0, 0),
+        color: 'yellow'
       }, {
         title: 'Pflegemaßnahme',
         start: new Date(2024, 0, 18, 13, 0, 0),
         end: new Date(2024, 0, 18, 17, 0, 0),
+        color: 'pink',
       }, {
         title: 'Transport',
         start: new Date(2024, 0, 18, 18, 10, 0),
         end: new Date(2024, 0, 18, 21, 20, 0),
+        color: 'blue',
       }, {
         title: 'Pflanzenschutz',
         start: new Date(2024, 1, 18, 10, 0, 0),
         end: new Date(2024, 1, 18, 18, 0, 0),
+        color: 'blue',
       }]
     };
   }
